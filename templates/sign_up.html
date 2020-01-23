@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Black+Ops+One|Cookie|Fredericka+the+Great|Great+Vibes|Monoton|Pacifico|Poiret+One|Rye|Sacramento|Satisfy|Sigmar+One&display=swap" rel="stylesheet">
+    <meta charset="utf-8">
+    <title>SIGN UP FORM</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/sign_up.css') }}">
+  </head>
+  <body style=' background:url("/static/images/signup_background.jpg");
+  background-size:cover;'>
+    <div class="wrap">
+      <h2>Sign Up</h2>
+      <form action="{{ url_for('register') }}" method="post">
+        <input type="text" placeholder="First Name" required name="firstname" id="firstname">
+        <input type="text" placeholder="Last Name" required name="lastname" id="lastname">
+        <input type="text" placeholder="Email" required name="email" id="email">
+        <input type="text" placeholder="Username" required name="username" id="username">
+        <input type="text" placeholder="Address" required name="address" id="address">
+        <p>Date of birth</p>
+        <input type="date" placeholder="Date of Birth" max="2019-12-12" required name="dob" id="dob">
+        <input type="text" placeholder="Contact Number" required name="contact_number" id="contact_number">
+        <input type="password" placeholder="Password" required name="password1" id="password1">
+        <input type="password" placeholder="Confirm Password" required name="password2" id="password2">
+        <h2>{{ msg }}</h2>
+        <input type="submit" style="font-weight: bold" value="SIGN UP">
+
+      </form>
+
+    </div>
+
+  </body>
+</html>

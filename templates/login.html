@@ -1,0 +1,29 @@
+<!doctype html>
+
+<html>
+	<head>
+		<link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Black+Ops+One|Cookie|Fredericka+the+Great|Great+Vibes|Monoton|Pacifico|Poiret+One|Rye|Sacramento|Satisfy|Sigmar+One&display=swap" rel="stylesheet">
+		<title> Login form </title>
+		<link rel="stylesheet" href="{{ url_for('static',filename='css/login.css') }}">
+
+
+	</head>
+	<body style="background:url('/static/images/login_background.jpg');background-size:cover;">
+	<div class="loginBox">
+
+		<img src="/static/images/user.png" class="user">
+		<h2>Log In Here</h2>
+		<form action="{{ url_for('login') }}" method="post">
+			<p>UserName</p>
+			<input type="text" name = "username" placeholder="Enter UserName" id="username" required>
+			<p>Password</p>
+			<input type="password" name = "password" placeholder="Enter Password" id="password" required>
+			<input type="submit" name = "submit" value="sign In">
+      <center>
+      <br>
+      <a href="{{ url_for('register') }}"> New User? Register here!!</a>
+      </center>
+		</form>
+	</div>
+	</body>
+</html> 

@@ -1,0 +1,125 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+
+
+<hr><hr><h1 style="color:white;padding-top: 40px;"> Welcome {{username}}!!</h1>
+  <div class="container">
+    <a href="{{ url_for('pizzahut') }}">  <div class="box">
+        <div class="imgBox">
+
+            <img src="/static/images/pizza_logo.png" alt="pizza logo">
+
+        </div>
+        <div class="details">
+          <div class="content">
+              <h2>PIZZA HUT!!</h2>
+              <p>There’s nothing cookie-cutter about Pizza Hut. Not our pizzas. Not our people. And definitely not the way we live life. </p>
+          </div>
+        </div>
+
+      </div>
+      </a>
+      <a href="{{ url_for('mcd') }}"><div class="box">
+        <div class="imgBox">
+
+            <img src="/static/images/mcd_logo.png" alt="mcd logo">
+
+        </div>
+        <div class="details">
+          <div class="content">
+              <h2>McDONALDS!!</h2>
+              <p>McDonald’s food is made with quality, fresh ingredients which are sourced from our local suppliers in India from over 2 decades now. </p>
+          </div>
+        </div>
+      </div></a>
+      <a href="{{ url_for('dominos') }}"><div class="box">
+        <div class="imgBox">
+
+            <img src="/static/images/dominos_logo.png" alt="dominos_logo">
+
+        </div>
+        <div class="details">
+          <div class="content">
+              <h2>DOMINOS!!</h2>
+              <p>Dominos doesn’t need any introduction, especially for pizza lovers as the menu is permanently saved to them. </p>
+          </div>
+        </div>
+      </div></a>
+      <a href="{{ url_for('polarbear') }}"><div class="box">
+        <div class="imgBox">
+
+            <img src="/static/images/polarbear_logo.jpg" alt="polarbear_logo">
+
+        </div>
+        <div class="details">
+          <div class="content">
+              <h2>POLAR BEAR!!</h2>
+              <p>Polar Bear is home to extraordinary Sundaes, shakes and ice-cream crafted with love and perfection </p>
+          </div>
+        </div>
+      </div></a>
+      <a href="{{ url_for('tacobell') }}"><div class="box">
+        <div class="imgBox">
+
+            <img src="/static/images/taco_logo.png" alt="taco_logo">
+
+        </div>
+        <div class="details">
+          <div class="content">
+              <h2>TACO BELL!!</h2>
+              <p>All Taco Bell, all the time. The way it was meant to be.  </p>
+          </div>
+        </div>
+      </div></a>
+      <a href="{{ url_for('paradise') }}"><div class="box">
+        <div class="imgBox">
+
+            <img src="/static/images/paradise_logo.jpg" alt="paradise_logo">
+
+        </div>
+        <div class="details">
+          <div class="content">
+              <h2>PARADISE!!</h2>
+              <p>While Irani chai and Osmania biscuits, can make a  heart beat, nothing makes it sing like a serving of biryani. </p>
+          </div>
+        </div>
+
+      </div></a>
+      <a href="{{ url_for('corner_house') }}"><div class="box">
+        <div class="imgBox">
+
+            <img src="/static/images/corner_house.png" alt="corner house">
+
+        </div>
+        <div class="details">
+          <div class="content">
+              <h2>CORNER HOUSE!!</h2>
+              <p>Corner House Ice Creams offers fresh ice creams made from natural ingredients. </p>
+          </div>
+        </div>
+      </div></a>
+      <a href="{{ url_for('kfc') }}"><div class="box">
+        <div class="imgBox">
+
+            <img src="/static/images/kfc_logo.png" alt="kfc_logo">
+
+        </div>
+        <div class="details">
+          <div class="content">
+              <h2>KFC!!</h2>
+              <p>It's finger likin good!! Nobody does chicken like KFC. Natural and fresh!! </p>
+          </div>
+        </div>
+
+      </div></a>
+
+
+
+    </div>
+
+
+
+{% endblock %}

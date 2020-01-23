@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+{% block title %}Taco Bell Menu{% endblock %}
+{% block link %}<link rel="stylesheet" href="/static/css/domimenu.css"}>{% endblock %}
+
+{% block content %}
+
+
+
+	<center>
+	<img src="/static/images/taco_logo.png" alt="Image goes here" class="center">
+
+	<h1> Taco Bell</h1>
+
+</center>
+
+<form action="{{ url_for('add_to_cart') }}" method="post">
+			
+
+
+     
+
+<div id ="main">
+
+ <div id ="food">
+
+<dl>
+	<img src="/static/images/tacocrispychicken.jpeg">
+<dt>Crispy Chicken 169</dt>
+ <input class="btn" type="submit" name = "TAC001" value="ADD TO CART" id="crispy_chicken">
+    
+
+</dl>
+
+<dl>
+<img src="/static/images/tacochalupa.jpeg">
+<dt>Chicken Chalupa 139</dt>
+<input class="btn" type="submit" name = "TAC002" value="ADD TO CART" id="chalupa">
+
+    </dl>
+
+<dl>
+<img src="/static/images/tacochicken.jpeg">
+<dt>Chicken Taco 149</dt>
+
+<input class="btn" type="submit" name = "TAC003" value="ADD TO CART" id="taco">
+</dl>
+</div>
+ <div id="food1">
+
+ 	<div id='food_box'>
+ 		<img src="/static/images/tacomexfries.jpeg">
+ 		<dt> Mexican Fries 79</dt>
+ 		<input class="btn" type="submit" name = "TAC004" value="ADD TO CART" id="fries">
+ 	</div>
+ 	<dl>
+ 		<img src="/static/images/tacoquesadilla.jpeg">
+ 		<dt> Quesadilla 169</dt>
+
+ 		<input class="btn" type="submit" name = "TAC005" value="ADD TO CART" id="quesadilla">
+ 	</dl>
+ 	<dl>
+ 		<img src="/static/images/tacoburritomeal.jpeg">
+ 		<dt> Burrito Supreme combo 250</dt>
+ 		<input class="btn" type="submit" name = "TAC006" value="ADD TO CART" id="burrito_meal">
+ 	</dl>
+
+ </div>
+ </form>
+
+{% endblock %}

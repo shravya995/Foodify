@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+{% block title %}Paradise Menu{% endblock %}
+{% block link %}<link rel="stylesheet" href="/static/css/domimenu.css"}>{% endblock %}
+
+{% block content %}
+
+
+
+	<center>
+	<img src="/static/images/paradise_logo.jpg" alt="Image goes here" class="center">
+
+	<h1> PARADISE</h1>
+
+</center>
+
+<form action="{{ url_for('add_to_cart') }}" method="post">
+			
+
+
+     
+
+<div id ="main">
+
+ <div id ="food">
+
+<dl>
+	<img src="/static/images/parachickentikka.jpeg">
+<dt>Chicken Tikka 180</dt>
+ <input class="btn" type="submit" name = "PAR001" value="ADD TO CART" id="chicken_tikka">
+    
+
+</dl>
+
+<dl>
+<img src="/static/images/parabutterkulcha.jpeg">
+<dt>Butter kulcha 59</dt>
+<input class="btn" type="submit" name = "PAR002" value="ADD TO CART" id="kulcha">
+
+    </dl>
+
+<dl>
+<img src="/static/images/paravegbiriyani.jpeg">
+<dt>Veg Biriyani 210</dt>
+
+<input class="btn" type="submit" name = "PAR003" value="ADD TO CART" id="veg_biriyani">
+</dl>
+</div>
+ <div id="food1">
+
+ 	<div id='food_box'>
+ 		<img src="/static/images/parafishfry.jpeg">
+ 		<dt> Fish Fry 350</dt>
+ 		<input class="btn" type="submit" name = "PAR004" value="ADD TO CART" id="fish_fry">
+ 	</div>
+ 	<dl>
+ 		<img src="/static/images/parabutterchicken.jpeg">
+ 		<dt> Butter Chicken 250</dt>
+
+ 		<input class="btn" type="submit" name = "PAR005" value="ADD TO CART" id="butter_chicken">
+ 	</dl>
+ 	<dl>
+ 		<img src="/static/images/parachickenbiriyani,jpeg.jpeg">
+ 		<dt> Chicken Biriyani 280</dt>
+ 		<input class="btn" type="submit" name = "PAR006" value="ADD TO CART" id="chicken_biriyani">
+ 	</dl>
+
+ </div>
+ </form>
+
+{% endblock %}

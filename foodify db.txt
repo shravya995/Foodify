@@ -1,0 +1,76 @@
+CREATE TABLE MENU(Restaurant_id varchar(8),item_id varchar(8),item_name varchar(20),price float,constraint pkm primary key(item_id),constraint fkm foreign key(Restaurant_id) references Restaurant(Restaurant_id));
+
+
+CREATE TABLE EMPLOYEE(Employee_id varchar(8),firstname varchar(20),lastname varchar(20),email varchar(20),contact_number int(10),address varchar(100),salary integer,no_of_orders integer,constraint pke primary key(employee_id));
+
+
+CREATE TABLE ORDERS(Order_id varchar(8),Restaurant_id varchar(8),item_id varchar(20), quantity integer, price float, constraint pko primary key(Order_id,item_id), constraint fko2 foreign key(Restaurant_id) references restaurant(Restaurant_id),constraint fko4 foreign key(order_id)references order_distribution(order_id));
+
+
+CREATE TABLE REVIEWS(username varchar(20),order_id varchar(8),restaurant_id varchar(8),review_rating integer,comments varchar(40),constraint pkrw primary key(username,order_id,restaurant_id),constraint fkw1 foreign key(username) references customer(username),constraint fkrw2 foreign key(restaurant_id) references  restaurant(restaurant_id),constraint fkrw3 foreign key(order_id) references  order_distribution(order_id));
+
+
+CREATE TABLE PAYMENT(payment_id varchar(8),order_id varchar(8),mode_of_payment varchar(20),order_amount float,constraint pkp primary key(payment_id),constraint fkp foreign key(order_id) references order_distribution(order_id));
+
+
+CREATE TABLE ORDER_DISTRIBUTION(order_id varchar(8),username varchar(20),employee_id varchar(8),constraint pkod primary key(order_id),constraint fkod1 foreign key(employee_id) references employee(employee_id),constraint fkod2 foreign key(username) references customer(username));
+
+
+
+alter table employee add no_of_orders integer default 0;
+
+
+
+DELIMITER $$
+CREATE TRIGGER order_count
+after insert on order_distribution
+for each row 
+begin 
+update employee set 
+no_of_orders = no_of_orders+1  
+where 
+employee_id=new.employee_id;
+END$$
+DELIMITER;
+
+
+INSERT INTO EMPLOYEE(Employee_id,firstname,lastname,email,contact_number,address,salary) values('FEM003','Gopal','Sharma','gopals15@gmail.com','9844806295','#15,4th main,5th cross,Nagarbhavi,Bangalore-560056',20000);
+
+
+font-family: 'Pacifico', cursive;
+font-family: 'Rye', cursive;
+font-family: 'Abril Fatface', cursive;
+font-family: 'Sigmar One', cursive;
+font-family: 'Black Ops One', cursive;
+font-family: 'Fredericka the Great', cursive;
+font-family: 'Satisfy', cursive;
+font-family: 'Great Vibes', cursive;
+font-family: 'Sacramento', cursive;
+font-family: 'Cookie', cursive;
+font-family: 'Poiret One', cursive;
+font-family: 'Monoton', cursive;
+
+insert into restaurant values('FRD001','DOMINOS',4.1);
+insert into restaurant values('FRD002','MCDONALDS',4);
+insert into restaurant values('FRD003','PIZZA HUT',4.1);
+insert into restaurant values('FRD004','POLAR BEAR',4.4);
+insert into restaurant values('FRD005','TACO BELL',4.3);
+insert into restaurant values('FRD006','PARADISE BIRYANI',4);
+insert into restaurant values('FRD007','CORNER HOUSE',4.6);
+insert into restaurant values('FRD008','KFC',4.3);
+
+
+DELIMITER // ;
+Create PROCEDURE insert_menu(IN Restaurant_id varchar(8),IN item_id varchar(8),IN item_name varchar(20),IN price float)
+    BEGIN
+    insert into MENU values (Restaurant_id,item_id,item_name,price);
+    END //
+
+DELIMITER ; //
+CALL insert_menu('FRD008','KFC001','Popcorn Chicken',120);
+CALL insert_menu('FRD008','KFC002','Chicken Strips',200);
+CALL insert_menu('FRD008','KFC003','Rice Bowl',180);
+CALL insert_menu('FRD008','KFC004','Hot Crispy Chicken',200);
+CALL insert_menu('FRD008','KFC005','Zinger Burger Meal',250);
+CALL insert_menu('FRD008','KFC006','Krusher(choco)',75);
+

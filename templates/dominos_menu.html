@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+{% block title %}Dominos Menu{% endblock %}
+{% block link %}<link rel="stylesheet" href="/static/css/domimenu.css"}>{% endblock %}
+
+{% block content %}
+
+
+
+	<center>
+	<img src="/static/images/dominos_logo.png" alt="Image goes here" class="center">
+
+	<h1  > DOMINOS</h1>
+
+</center>
+<h1>{{msg}}</h1>
+
+<form action="{{ url_for('add_to_cart') }}" method="post">
+			
+
+
+     
+
+<div id ="main">
+
+ <div id ="food">
+
+<dl>
+	<img src="/static/images/farmhouse.jpeg">
+<dt>Farmhouse 195</dt>
+ <input type="submit" name = "DOM001" value="ADD TO CART" id="farmhouse" class="btn">
+    
+
+</dl>
+
+<dl>
+<img src="/static/images/peppanner.jpeg">
+<dt>Deluxe Veggie 235</dt>
+<input class="btn" type="submit" name = "DOM002" value="ADD TO CART" id="deluxe_veggie">
+
+    </dl>
+
+<dl>
+<img src="/static/images/garlicb.jpeg">
+<dt>Garlic breadsticks 99</dt>
+
+<input class="btn" type="submit" name = "DOM003" value="ADD TO CART" id="garlic_breadsticks">
+</dl>
+</div>
+ <div id="food1">
+
+ 	<div id='food_box'>
+ 		<img src="/static/images/chicken1.jpeg">
+ 		<dt> Chicken Deluxe 250 </dt>
+ 		<input class="btn" type="submit" name = "DOM004" value="ADD TO CART" id="chicken_deluxe">
+ 	</div>
+ 	<dl>
+ 		<img src="/static/images/chicken.jpeg">
+ 		<dt> Chicken Barbeque     300</dt>
+
+ 		<input class="btn" type="submit" name = "DOM005" value="ADD TO CART" id="chicken_barbequeue">
+ 	</dl>
+ 	<dl>
+ 		<img src="/static/images/taco.jpeg">
+ 		<dt> Taco Mexicana 119 </dt>
+ 		<input class="btn" type="submit" name = "DOM006" value="ADD TO CART" id="taco_mexicano">
+ 	</dl>
+
+ </div>
+ </form>
+
+{% endblock %}

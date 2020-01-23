@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head >
+
+  <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Black+Ops+One|Cookie|Fredericka+the+Great|Great+Vibes|Monoton|Pacifico|Poiret+One|Rye|Sacramento|Satisfy|Sigmar+One&display=swap" rel="stylesheet">
+
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/main.css') }}">
+    <style type="">
+    br {
+   display: block;
+   margin: 300px 0;
+}
+
+    #employee {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width:800px;
+  color: white;
+}
+
+#employee td, #employee th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#employee tr:nth-child(even){background-color: #f2f2f2;color: black;}
+
+#employee tr:hover {background-color: #ddd;color: black}
+
+#employee th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #4CAF50;
+  color: white;
+}
+#submit {
+ background-color: #bbb;
+ padding: .5em;
+ -moz-border-radius: 5px;
+ -webkit-border-radius: 5px;
+ border-radius: 6px;
+ color: #fff;
+ font-family: 'Oswald';
+ font-size: 20px;
+ text-decoration: none;
+ border: none;
+ width: 100px;
+}
+
+#submit:hover {
+ border: none;
+ background: orange;
+ box-shadow: 0px 0px 1px #777;
+}
+</style>
+
+  <title>About Us</title>
+</head>
+<style>
+	h1{
+		font-family: 'Monaco', sans-serif;
+  font-size:40px;
+  font-weight:500;
+  text-decoration:underline;
+  color:white;
+	}
+	h2{
+		font-family: 'Monaco', sans-serif;
+		color:white;
+	}
+	body{
+	background-color: #ff9980
+}
+footer{
+	 width: 100%;
+        height: 80px;
+        padding: 1px;
+        -moz-border-radius: 35px;
+        border-radius: 35px;
+        background-color: #85a3e0;
+        color:#ffff;
+        position: fixed;
+        bottom: 0;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+}
+
+
+</style>
+ <header id="page_header">
+<div style="margin-right: : 200px;padding-left: 1600px;" class="menu">
+                     <ul id="nav" style="list-style-type: none;">
+                     <li ><a href="{{ url_for('main') }}" class="brk-btn">Back</a></li>
+                     <br><br><br>
+
+
+                    </ul>
+                </div>
+
+
+        </header>
+<body style=' background:url("/static/images/about_bg.jpg");
+  background-size:cover;'>
+
+<center><h1 style="margin-top: 0px"> About Us </h1> </center>
+
+	<h2> Foodify is all about delivering hot,delicious and healthy food to your doorstep.We at foodify believe in providing our customers their favorite food at the fastest rate to leave them happy and satisfied! </h2>
+</body>
+
+<footer>
+	<p> Contact Us: foodify123@gmail.com </p>
+</footer>
+</html>
+

@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+
+{% block title %}Cart{% endblock %}
+{% block link %}<link rel="stylesheet" href="/static/css/cart.css"}>{% endblock %}
+
+{% block content %}
+<style type="text/css">
+  body{
+    background-color: #ffff99;
+  }
+
+</style>
+<center>
+  <hr style="border-color: black"><hr style="border-color: black">
+	<h1 style="color: black;">Please confirm the items before ordering..</h1>
+<form action="{{ url_for('cart') }}" method="POST">
+<table>
+    
+      <tr>
+        <th>ITEM</th>
+        <th>PRICE</th>
+        <th>QUANTITY</th>
+        <th>REMOVE FROM CART</th>
+
+      </tr>
+   
+
+{% for key, value in cart_dict.items() %}
+  <tr>
+    <td>{{ item_dict[key] }}</td>
+    <td>{{ value }}</td>
+    <td><input type="number" name="{{key}}" min="1" max="9" step="1" value="{{ cart_quantity[key] }}"></td>
+    <td><input type="checkbox" name="remove_from_cart" value="{{key}}"></td>
+    
+  </tr>
+  {% endfor %}
+  
+
+</table>
+
+<br>
+<br>
+
+
+  
+  <input type="submit" id="btn" name="clear_cart" value="CLEAR CART">
+  <input type="submit" id="btn" name="remove" value="REMOVE FROM CART">
+  
+  <h2>Mode of Payment</h2>
+
+
+
+
+  <input type="radio" name="modePayment" value="cash" checked="checked" required>CASH ON DELIVERY
+  <input type="radio" name="modePayment" value="card">CARD<br><br>
+  <input type="submit" name="order" value="ORDER" id="btn"><br><br>
+ 
+
+
+
+{% endblock %}

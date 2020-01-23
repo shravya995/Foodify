@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+{% block title %}Polar Bear Menu{% endblock %}
+{% block link %}<link rel="stylesheet" href="/static/css/domimenu.css"}>{% endblock %}
+
+{% block content %}
+
+
+
+	<center>
+	<img src="/static/images/polarbear_logo1.jpeg" alt="Image goes here" class="center">
+
+	<h1> Polar Bear</h1>
+
+</center>
+
+<form action="{{ url_for('add_to_cart') }}" method="post">
+			
+
+
+     
+
+<div id ="main">
+
+ <div id ="food">
+
+<dl>
+	<img src="/static/images/polardbc.jpeg">
+<dt>Death by Chocolate 199</dt>
+ <input class="btn" type="submit" name = "POB001" value="ADD TO CART" id="dbc">
+    
+
+</dl>
+
+<dl>
+<img src="/static/images/polarbrowniefudge.jpeg">
+<dt>Brownie Fudge 200</dt>
+<input class="btn" type="submit" name = "POB002" value="ADD TO CART" id="brownie_fudge">
+
+    </dl>
+
+<dl>
+<img src="/static/images/polarrockyroad.jpeg">
+<dt>Rocky Road 150</dt>
+
+<input class="btn" type="submit" name = "POB003" value="ADD TO CART" id="rocky_road">
+</dl>
+</div>
+ <div id="food1">
+
+ 	<div id='food_box'>
+ 		<img src="/static/images/polardryfruit.jpeg">
+ 		<dt> Dry Fruit Special 250</dt>
+ 		<input class="btn" type="submit" name = "POB004" value="ADD TO CART" id="dry_fruit">
+ 	</div>
+ 	<dl>
+ 		<img src="/static/images/kitkatsundae.jpeg">
+ 		<dt> KitKat Sundae 180</dt>
+
+ 		<input class="btn" type="submit" name = "POB005" value="ADD TO CART" id="kit_kat">
+ 	</dl>
+ 	<dl>
+ 		<img src="/static/images/litchisundae.jpeg">
+ 		<dt> Lychee Sundae 200</dt>
+ 		<input class="btn" type="submit" name = "POB006" value="ADD TO CART" id="lychee_sundae">
+ 	</dl>
+
+ </div>
+ </form>
+
+{% endblock %}

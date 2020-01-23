@@ -1,0 +1,98 @@
+ {% extends 'base.html' %}
+
+{% block title %}Cart{% endblock %}
+{% block link %}<link rel="stylesheet" href="/static/css/cart.css"}>{% endblock %}
+
+{% block content %}
+<style type="text/css">
+  body{
+    background-color: #ffff99;
+  }
+
+</style>
+<form action="{{ url_for('review') }}" method="POST">
+
+
+
+
+  <h1 style="margin-left: 100px">Give your reviews below according to the restaurants</h1>
+{% for key,value in restaurant_id_list.items() %}
+ <h1 style="text-align: center;">{{ value }}</h1><br><br>
+ {% if key=='FRD001' %}
+ <center><textarea type="text" id='FRD001' style="font-size: 20px;" cols="40" rows="5" value="Type here..."  name='FRD001'>Type here...</textarea><br><br>
+ <input type="radio" name="review_rating_1" value="1"  required id="review_rating_1">1
+ <input type="radio" name="review_rating_1" value="2" id="review_rating_1">2
+ <input type="radio" name="review_rating_1" value="3" id="review_rating_1">3
+ <input type="radio" name="review_rating_1" value="4" id="review_rating_1">4
+ <input type="radio" name="review_rating_1" value="5" id="review_rating_1" checked="checked" >5<br><br>
+ 
+
+
+ </center>
+ {% endif %}
+ {% if key=='FRD002' %}
+ <center><textarea type="text" id='FRD002' rows="5" cols="40" style="font-size: 20px;" value="Type here..."  name='FRD002'>Type here...</textarea><br><br> 
+ 	<input type="radio" name="review_rating_2" value="1"  required id="review_rating_2">1
+ <input type="radio" name="review_rating_2" value="2" id="review_rating_2">2
+ <input type="radio" name="review_rating_2" value="3" id="review_rating_2">3
+ <input type="radio" name="review_rating_2" value="4" id="review_rating_2">4
+ <input type="radio" name="review_rating_2" value="5" id="review_rating_2" checked="checked" >5<br><br>
+ {% endif %}
+ {% if key=='FRD003' %}
+ <center><textarea type="text" id='FRD003' rows="5" cols="40" style="font-size: 20px;" value="Type here..."  name='FRD003'>Type here...</textarea><br><br> 
+ 	<input type="radio" name="review_rating_3" value="1"  required id="review_rating_3">1
+ <input type="radio" name="review_rating_3" value="2" id="review_rating_3">2
+ <input type="radio" name="review_rating_3" value="3" id="review_rating_3">3
+ <input type="radio" name="review_rating_3" value="4" id="review_rating_3">4
+ <input type="radio" name="review_rating_3" value="5" id="review_rating_3" checked="checked" >5<br><br>
+ {% endif %}
+ {% if key=='FRD004' %}
+ <center><textarea type="text" id='FRD004' rows="5" cols="40" style="font-size: 20px;" value="Type here..."  name='FRD004'>Type here...</textarea><br><br> 
+ 	<input type="radio" name="review_rating_4" value="1"  required id="review_rating_4">1
+ <input type="radio" name="review_rating_4" value="2" id="review_rating_4">2
+ <input type="radio" name="review_rating_4" value="3" id="review_rating_4">3
+ <input type="radio" name="review_rating_4" value="4" id="review_rating_4">4
+ <input type="radio" name="review_rating_4" value="5" id="review_rating_4" checked="checked" >5<br><br>
+ {% endif %}
+ {% if key=='FRD005' %}
+ <center><textarea type="text" id='FRD005' rows="5" cols="40" style="font-size: 20px;" value="Type here..."  name='FRD005'>Type here...</textarea><br><br> 
+ 	<input type="radio" name="review_rating_5" value="1"  required id="review_rating_5">1
+ <input type="radio" name="review_rating_5" value="2" id="review_rating_5">2
+ <input type="radio" name="review_rating_5" value="3" id="review_rating_5">3
+ <input type="radio" name="review_rating_5" value="4" id="review_rating_5">4
+ <input type="radio" name="review_rating_5" value="5" id="review_rating_5" checked="checked" >5<br><br>
+ {% endif %}
+ {% if key=='FRD006' %}
+ <center><textarea type="text" id='FRD006' rows="5" cols="40" style="font-size: 20px;" value="Type here..."  name='FRD006'>Type here...</textarea><br><br> 
+ 	<input type="radio" name="review_rating_6" value="1"  required id="review_rating_6">1
+ <input type="radio" name="review_rating_6" value="2" id="review_rating_6">2
+ <input type="radio" name="review_rating_6" value="3" id="review_rating_6">3
+ <input type="radio" name="review_rating_6" value="4" id="review_rating_6">4
+ <input type="radio" name="review_rating_6" value="5" id="review_rating_6" checked="checked" >5<br><br>
+ {% endif %}
+ {% if key=='FRD007' %}
+ <center><textarea type="text" id='FRD007' rows="5" cols="40" style="font-size: 20px;" value="Type here..."  name='FRD007'>Type here...</textarea><br><br> 
+ 	<input type="radio" name="review_rating_7" value="1"  required id="review_rating_7">1
+ <input type="radio" name="review_rating_7" value="2" id="review_rating_7">2
+ <input type="radio" name="review_rating_7" value="3" id="review_rating_7">3
+ <input type="radio" name="review_rating_7" value="4" id="review_rating_7">4
+ <input type="radio" name="review_rating_7" value="5" id="review_rating_7" checked="checked" >5<br><br>
+ {% endif %}
+ {% if key=='FRD008' %}
+ <center><textarea type="text" id='FRD008' rows="5" cols="40" style="font-size: 20px;" value="Type here..."  name='FRD008'>Type here...</textarea><br><br> 
+ 	<input type="radio" name="review_rating_8" value="1"  required id="review_rating_8">1
+ <input type="radio" name="review_rating_8" value="2" id="review_rating_8">2
+ <input type="radio" name="review_rating_8" value="3" id="review_rating_8">3
+ <input type="radio" name="review_rating_8" value="4" id="review_rating_8">4
+ <input type="radio" name="review_rating_8" value="5" id="review_rating_8" checked="checked" >5<br><br>
+ {% endif %}
+
+
+  {% endfor %}
+  <br><br><input type="submit"  name="review_submit" value="{{order_id}}"  class="btn" id='review_submit' style="color: orange;font-size: 20px;background-color: orange"><br><br>
+  
+</form>
+<h1>{{msg}}</h1>
+</center>
+
+{% endblock %}

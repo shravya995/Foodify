@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+{% block title %}Dominos Menu{% endblock %}
+{% block link %}<link rel="stylesheet" href="/static/css/domimenu.css"}>{% endblock %}
+
+{% block content %}
+
+
+
+	<center>
+	<img src="/static/images/mcd_logo.png" alt="Image goes here" class="center">
+
+	<h1  > MC Donalds</h1>
+
+</center>
+
+<form action="{{ url_for('add_to_cart') }}" method="post">
+			
+
+
+     
+
+<div id ="main">
+
+ <div id ="food">
+
+<dl>
+	<img src="/static/images/mcveggie.jpeg">
+<dt>MC Veggie 70</dt>
+ <input class="btn" type="submit" name = "MCD001" value="ADD TO CART" id="mc_veggie">
+    
+
+</dl>
+
+<dl>
+<img src="/static/images/mcbigvegmeal.jpeg">
+<dt>McMaharaja Veg 212</dt>
+<input class="btn" type="submit" name = "MCD002" value="ADD TO CART" id="maharaja_veg">
+
+    </dl>
+
+<dl>
+<img src="/static/images/pizzapuff.jpeg">
+<dt>McPizza puff 25</dt>
+
+<input class="btn" type="submit" name = "MCD003" value="ADD TO CART" id="pizza_puff">
+</dl>
+</div>
+ <div id="food1">
+
+ 	<div id='food_box'>
+ 		<img src="/static/images/spicychicken.jpeg">
+ 		<dt> McSpicy chicken 120 </dt>
+ 		<input class="btn" type="submit" name = "MCD004" value="ADD TO CART" id="spicy_chicken">
+ 	</div>
+ 	<dl>
+ 		<img src="/static/images/chickenmeal.jpeg">
+ 		<dt> McSpicy chicken meal 262</dt>
+
+ 		<input class="btn" type="submit" name = "MCD005" value="ADD TO CART" id="chicken_meal">
+ 	</dl>
+ 	<dl>
+ 		<img src="/static/images/chickenwings.jpeg">
+ 		<dt> McChicken wings(3pc) 120 </dt>
+ 		<input class="btn" type="submit" name = "MCD006" value="ADD TO CART" id="chicken_wings">
+ 	</dl>
+
+ </div>
+ </form>
+
+{% endblock %}

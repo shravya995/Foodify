@@ -1,0 +1,40 @@
+
+
+<!-- templates/base.html -->
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head >
+  <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Black+Ops+One|Cookie|Fredericka+the+Great|Great+Vibes|Monoton|Pacifico|Poiret+One|Rye|Sacramento|Satisfy|Sigmar+One&display=swap" rel="stylesheet">
+  <meta charset="utf-8">
+  <title>{% block title %}Foodify{% endblock %}</title>
+  <link rel="stylesheet" href="{{ url_for('static',filename='css/foodify_home.css')}}">
+  {% block link %}
+  {% endblock %}
+ 
+</head>
+ <header style="background-color: red;">
+    <div class="header_container">
+
+</div>
+
+      <center>
+        <img src="/static/images/foodify_logo.jpeg" alt="foodigy_logo">
+      </center>
+    </div>
+  </header>
+<body>
+  <div class="sidenav">
+    <a href="{{ url_for('home') }}" style="background:yellow ;color: black"> HOME</a>
+    <a href="{{ url_for('cart') }}" style="background:blue ;"> CART</a>
+    <a href="{{ url_for('logout') }}" style="background:green; ">LOGOUT </a>
+  
+
+</div>
+
+  <main>
+    {% block content %}
+    {% endblock %}
+  </main>
+</body>
+</html>
+

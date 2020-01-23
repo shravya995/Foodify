@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+{% block title %}KFC Menu{% endblock %}
+{% block link %}<link rel="stylesheet" href="/static/css/domimenu.css"}>{% endblock %}
+
+{% block content %}
+
+
+
+	<center>
+	<img src="/static/images/kfc_logo.png" alt="Image goes here" class="center">
+
+	<h1  > KFC</h1>
+
+</center>
+
+<form action="{{ url_for('add_to_cart') }}" method="post">
+			
+
+
+     
+
+<div id ="main">
+
+ <div id ="food">
+
+<dl>
+	<img src="/static/images/kfcpop.jpeg">
+<dt>Popcorn Chicken 120</dt>
+ <input class="btn" type="submit" name = "KFC001" value="ADD TO CART" id="pop_chicken">
+    
+
+</dl>
+
+<dl>
+<img src="/static/images/kfcbucket.jpeg">
+<dt>Hot Chicken Strips 200</dt>
+<input class="btn" type="submit" name = "KFC002" value="ADD TO CART" id="chicken_strips">
+
+    </dl>
+
+<dl>
+<img src="/static/images/kfcrice.jpeg">
+<dt>Rice Bowl 180</dt>
+
+<input class="btn" type="submit" name = "KFC003" value="ADD TO CART" id="rice_bowl">
+</dl>
+</div>
+ <div id="food1">
+
+ 	<div id='food_box'>
+ 		<img src="/static/images/kfcbucket1.jpeg">
+ 		<dt> Hot Crispy Chicken 200 </dt>
+ 		<input class="btn" type="submit" name = "KFC004" value="ADD TO CART" id="crispy_chicken">
+ 	</div>
+ 	<dl>
+ 		<img src="/static/images/kfcmeal.jpeg">
+ 		<dt> Zinger Burger combo 250</dt>
+
+ 		<input class="btn" type="submit" name = "KFC005" value="ADD TO CART" id="kfc_meal">
+ 	</dl>
+ 	<dl>
+ 		<img src="/static/images/kfckrusher.jpeg">
+ 		<dt> Krusher(choco) 75 </dt>
+ 		<input class="btn" type="submit" name = "KFC006" value="ADD TO CART" id="krusher">
+ 	</dl>
+
+ </div>
+ </form>
+
+{% endblock %}

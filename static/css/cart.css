@@ -1,0 +1,16 @@
+table {
+  border-collapse: collapse;
+  
+}
+
+th, td {
+  color: black;
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid black;
+  font-style: italic;
+}
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  height:auto;
+}

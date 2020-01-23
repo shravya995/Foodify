@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+{% block title %}CornerHouse Menu{% endblock %}
+{% block link %}<link rel="stylesheet" href="/static/css/domimenu.css"}>{% endblock %}
+
+{% block content %}
+
+
+
+	<center>
+	<img src="/static/images/corner_house.png" alt="Image goes here" class="center">
+
+	<h1  > Corner House</h1>
+
+</center>
+
+<form action="{{ url_for('add_to_cart') }}" method="post">
+			
+
+
+     
+
+<div id ="main">
+
+ <div id ="food">
+
+<dl>
+	<img src="/static/images/cornerdbc.jpeg">
+<dt>DBC 211</dt>
+ <input class="btn" type="submit" name = "COR001" value="ADD TO CART" id="dbc_sundae">
+    
+
+</dl>
+
+<dl>
+<img src="/static/images/cornerbrownie.jpeg">
+<dt>Brownie Fudge Sundae 150</dt>
+<input class="btn" type="submit" name = "COR002" value="ADD TO CART" id="brownie_fudgee">
+
+    </dl>
+
+
+</div>
+ <div id="food1">
+
+ 	<div id='food_box'>
+ 		<img src="/static/images/cornerbrownbomb.jpeg">
+ 		<dt> Brown Bomb 180 </dt>
+ 		<input class="btn" type="submit" name = "COR003" value="ADD TO CART" id="brown_bomb">
+ 	</div>
+ 	<dl>
+ 		<img src="/static/images/cornercake.jpeg">
+ 		<dt> Almond Fudge  150</dt>
+
+ 		<input class="btn" type="submit" name = "COR004" value="ADD TO CART" id="almond_fudge">
+ 	</dl>
+ 	
+
+ </div>
+ </form>
+
+{% endblock %}

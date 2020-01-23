@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+{% block title %}PizzaHut Menu{% endblock %}
+{% block link %}<link rel="stylesheet" href="/static/css/domimenu.css"}>{% endblock %}
+
+{% block content %}
+
+
+
+	<center>
+	<img src="/static/images/pizza_logo.png" alt="Image goes here" class="center">
+
+	<h1  > Pizza Hut</h1>
+
+</center>
+
+<form action="{{ url_for('add_to_cart') }}" method="post">
+			
+
+
+     
+
+<div id ="main">
+
+ <div id ="food">
+
+<dl>
+	<img src="/static/images/veggieloverss.jpeg">
+<dt>Veggie Lovers 195</dt>
+ <input class="btn" type="submit" name = "PIZ001" value="ADD TO CART" id="veggie_lovers">
+    
+
+</dl>
+
+<dl>
+<img src="/static/images/veggiessupreme.jpeg">
+<dt>Veggie Supreme 300</dt>
+<input class="btn" type="submit" name = "PIZ002" value="ADD TO CART" id="veggie_supreme">
+
+    </dl>
+
+<dl>
+<img src="/static/images/pizzagarlicb.jpeg">
+<dt>Garlic Bread Slices 120</dt>
+
+<input class="btn" type="submit" name = "PIZ003" value="ADD TO CART" id="pgarlic_bread">
+</dl>
+</div>
+ <div id="food1">
+
+ 	<div id='food_box'>
+ 		<img src="/static/images/chickensupreme.jpeg">
+ 		<dt> Chicken Supreme 300</dt>
+ 		<input class="btn" type="submit" name = "PIZ004" value="ADD TO CART" id="chicken_supreme">
+ 	</div>
+ 	<dl>
+ 		<img src="/static/images/orientalchicken.jpeg">
+ 		<dt> Oriental Chicken 350</dt>
+
+ 		<input class="btn" type="submit" name = "PIZ005" value="ADD TO CART" id="oriental_chicken">
+ 	</dl>
+ 	<dl>
+ 		<img src="/static/images/pchickenwings.jpeg">
+ 		<dt> Chicken Wings(7pc) 150 </dt>
+ 		<input class="btn" type="submit" name = "PIZ006" value="ADD TO CART" id="pchicken_wings">
+ 	</dl>
+
+ </div>
+ </form>
+
+{% endblock %}
